@@ -1,0 +1,18 @@
+.cell {
+    height: 30px;
+    width: 30px;
+    border: 0cm;
+}
+
+.blackcell {
+    background-color: brown;
+}
+
+.whitecell {
+    background-color: whitesmoke;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
