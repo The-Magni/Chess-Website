@@ -14,7 +14,7 @@ function createBoard() {
             ChessTable.appendChild(tr);
         }
     }
-    document.body.appendChild(ChessTable);
+    document.querySelector('#board').appendChild(ChessTable);
 }
 
 
