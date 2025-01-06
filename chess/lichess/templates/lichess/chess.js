@@ -1,23 +1,17 @@
-function createBoard() {
-    let ChessTable = document.createElement('table');
-    for (let i = 0; i < 8; i++) {
-        let tr = document.createElement('tr');
-        for (let j = 0; j < 8; j++) {
-            let td = document.createElement('td');
-            if ((i + j) % 2 == 0) {
-                td.setAttribute('class', 'cell whitecell');
-                tr.appendChild(td);
-            } else {
-                td.setAttribute('class', 'cell blackcell')
-                tr.appendChild(td);
-            }
-            ChessTable.appendChild(tr);
+import { Board } from "./pieces.js"
+
+const board = document.querySelector('#board');
+const chessBoard = new Board();
+
+chessBoard.grid.forEach(row => {
+    row.forEach(square => {
+        const div = document.createElement('div');
+        div.classList.add('cell');
+        if (square.white) {
+            div.classList.add('whitecell');
+        } else {
+            div.classList.add('blackcell');
         }
-    }
-    document.querySelector('#board').appendChild(ChessTable);
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    createBoard();
-})
+        board.appendChild(div);
+    });
+});

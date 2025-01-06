@@ -5,7 +5,7 @@ class Piece {
     }
 }
 
-class Square {
+export class Square {
     constructor(row, col, white, piece=null) {
         this.row = row;
         this.col = col;
@@ -14,7 +14,7 @@ class Square {
     }
 }
 
-class Board {
+export class Board {
     constructor() {
         this.grid = this.createBoard();
     }
